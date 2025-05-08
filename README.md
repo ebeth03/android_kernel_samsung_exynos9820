@@ -9,7 +9,7 @@ Stock Kernel with KernelSU Next & SuSFS based on [Kernel Source](https://github.
 - Kernel Based on HVD3 OneUI 4.1 (Binary 7)
 - OneUI 3/4 and Binaries 7, 8 and 9 Support (It may have some issues depending on ROM binary or OneUI version)
 - Implement Ramdisk (No more root loss after reboot)
-- Compile with AOSP Clang 14.0.3 (Based on r450784)
+- Compile with AOSP Clang 15.0.3 (Based on r468909b)
 - Nuke all Samsung's Security Feature, Logs & Debug in the Kernel
 - KernelSU Next
 - SuSFS
