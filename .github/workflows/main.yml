@@ -10,8 +10,12 @@ on:
         default: 'v'
       clang:
         description: 'Clang Version (12-18)'
-        required: true
-        default: '18'
+        required: false
+        default: ''
+      neutron:
+        description: 'Neutron Clang (Latest)'
+        required: false
+        default: 'latest'
       tag:
         description: 'Release Tag'
         required: true
@@ -50,7 +54,7 @@ jobs:
           
       - name: Building Kernel
         run: |
-            bash build.sh -m ${{ matrix.device }} -v ${{ env.BUILD_KERNEL_VERSION }} -l ${{ github.event.inputs.clang }} -r y
+            bash build.sh -m ${{ matrix.device }} -v ${{ env.BUILD_KERNEL_VERSION }} -l ${{ github.event.inputs.clang }} -n ${{ github.event.inputs.neutron }} -r y
 
       - name: Upload Kernel
         uses: actions/upload-artifact@v4
